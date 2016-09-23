@@ -1,1 +1,22 @@
 <h1>Nueva solicitud</h1>
+
+<%= form_for :member do |f| %>
+  <p>
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </p>
+ 
+  <p>
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido, style: 'text-transform:uppercase' %>
+  </p>
+
+  <p>
+    <%= f.label :index %><br>
+    <%= f.text_field :index %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
