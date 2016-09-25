@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  apellido: MyString
+  index: 1
+  fecha_inicio: 2016-09-24
+  fecha_fin: 2016-09-24
+  tipo_contrato: MyString
+
+two:
+  nombre: MyString
+  apellido: MyString
+  index: 1
+  fecha_inicio: 2016-09-24
+  fecha_fin: 2016-09-24
+  tipo_contrato: MyString
