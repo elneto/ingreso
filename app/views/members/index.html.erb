@@ -2,5 +2,5 @@
 <div class="list-group">
 
 <% @members.each do |member| %>
-	<a href="#" class="list-group-item"><%= member.apellido + " " + member.nombre + " " + member.index.to_s %></a>
+	<a href="<%= member_path(member) %>" class="list-group-item"><%= member.apellido + " " + member.nombre + " " + member.index.to_s %></a>
 <% end %>
