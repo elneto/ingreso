@@ -1,0 +1,6 @@
+<h1>Lista de empleados</h1>
+<div class="list-group">
+
+<% @members.each do |member| %>
+	<a href="#" class="list-group-item"><%= member.apellido + " " + member.nombre + " " + member.index.to_s %></a>
+<% end %>

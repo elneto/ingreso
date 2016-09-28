@@ -1,6 +1,11 @@
 class MembersController < ApplicationController
+	def index
+		@members = Member.all
+	end
+	
 	def show
 		@member = Member.find(params[:id])
+		#TODO send email to all approvers about this new request
 	end
 	
 	def new
