@@ -1,19 +1,30 @@
 <h1>Nueva solicitud</h1>
 
 <%= form_for :member, url: members_path do |f| %>
+  <% if @member.errors.any? %>
+    <div class="alert-danger" role="alert">Por favor corrija los errores siguientes:
+      <ul>
+      <% @member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>  
+      </ul>
+    </div>
+  <% end %>
+
   <div class="row">
     <div class="col-sm-3">
-    <br>
+      <br>
       <%= f.label :nombre, "Nombre(s)" %><br>
-      <%= f.text_field :nombre %>
+      <%= f.text_field :nombre, required: true %>
     </div>
     <div class="col-sm-3">
     <br>
       <%= f.label :apellido, "Apellido(s)" %><br>
-      <%= f.text_field :apellido, style: 'text-transform:uppercase' %>
+      <%= f.text_field :apellido, required: true, style: 'text-transform:uppercase' %>
     </div>
     <div class="col-sm-6">&nbsp;</div>
   </div>
+
   <div class="row">
     <div class="col-sm-3">
     <br>
@@ -27,6 +38,7 @@
     </div>
     <div class="col-sm-6">&nbsp;</div>
   </div>
+
   <div class="row">
     <div class="col-sm-3">
     <br>
@@ -42,6 +54,7 @@
     </div>
     <div class="col-sm-6">&nbsp;</div>
   </div>
+
   <div class="row">
     <div class="col-sm-3">
     <br><br>
