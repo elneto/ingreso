@@ -48,9 +48,13 @@
     <div class="col-sm-3">
     <br>
       <%= f.label :tipo_contrato, "Tipo de contrato" %><br>
-      <%= f.select :tipo_contrato, [['Permanente', 'permanente'],
-        ['Pasante', 'pasante'],
-        ['Temporal', 'temporal']]%>
+      <%= f.select :tipo_contrato, [
+        ['Fixed term', 'Fixed term'],
+        ['Temporary', 'Temporary'],
+        ['Intern', 'Intern'],
+        ['Consultant', 'Consultant'],
+        ['Contractor', 'Contractor'],
+        ]%>
     </div>
     <div class="col-sm-6">&nbsp;</div>
   </div>
