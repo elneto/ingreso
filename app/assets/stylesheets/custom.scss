@@ -1,9 +1,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$un-blue: #4B92DB;
+
 body{
 	padding-top: 50px;
 	input, select{
 	width:94%;
 	}
+}
+
+nav.navbar-inverse {
+	background: $un-blue !important;
+	li > a{
+		color: white !important;
+		&:hover{
+		text-decoration: underline;
+		}
+	}
+}
+
+a.navbar-brand {
+	color: white !important;
+}
+
+h1, label {
+  color: #444 !important;
+}
+
+.logo_cepal {
+	width: 70px;
+	float: right;
+	margin-top: 5px;
 }
