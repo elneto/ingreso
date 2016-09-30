@@ -25,7 +25,7 @@
 							member.fecha_fin.strftime("%d/%b/%y")
 						end %></td>
 		<td><%= link_to 'Ver', member_path(member) %></td>
-		<td><%= link_to 'Editar' %></td>
+		<td><%= link_to 'Editar', edit_member_path(member) %></td>
 		<td><%= link_to 'Borrar', member_path(member),
 						method: :delete,
 						data: {confirm: 'Seguro que lo deseas eliminar?'}%></td>

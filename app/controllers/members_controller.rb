@@ -12,6 +12,10 @@ class MembersController < ApplicationController
 		@member = Member.new
 	end
 
+	def edit
+		@member = Member.find(params[:id])
+	end
+
   def create
     @member = Member.new(member_params)
     
@@ -19,6 +23,16 @@ class MembersController < ApplicationController
 			redirect_to @member
 		else
 			render 'new'
+		end
+  end
+
+  def update
+  	@member = Member.new(member_params)
+    
+    if @member.update(member_params)
+			redirect_to @member
+		else
+			render 'edit'
 		end
   end
 
