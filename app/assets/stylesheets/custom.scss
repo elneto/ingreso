@@ -33,3 +33,8 @@ h1, label {
 	float: right;
 	margin-top: 5px;
 }
+
+th, td {
+  padding: 0.6em !important;
+  border-bottom: 1px solid grey;
+}

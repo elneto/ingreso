@@ -1,6 +1,30 @@
 <h1>Lista de empleados</h1>
 <div class="list-group">
 
+<table>
+	<tr>
+		<th>Apellido</th>
+		<th>Nombre</th>
+		<th>Index No.</th>
+		<th>Fecha de inicio</th>
+		<th>Fecha de termino</th>
+		<th>Ver</th>
+		<th>Editar</th>
+		<th>Borrar</th>
+	</tr>
+
 <% @members.each do |member| %>
-	<a href="<%= member_path(member) %>" class="list-group-item"><%= member.apellido.to_s + " " + member.nombre.to_s + " " + member.index.to_s %></a>
+	<tr>
+		<td><%= member.apellido.to_s %></td>
+		<td><%= member.nombre.to_s %></td>
+		<td><%= member.index.to_s %></td>
+		<td><%= member.fecha_inicio.to_s %></td>
+		<td><%= member.fecha_fin.to_s %></td>
+		<td><%= link_to 'Ver', member_path(member) %></td>
+		<td><%= link_to 'Editar' %></td>
+		<td><%= link_to 'Borrar', member_path(member),
+						method: :delete,
+						data: {confirm: 'Seguro que lo deseas eliminar?'}%></td>
+	</tr>
 <% end %>
+</table>

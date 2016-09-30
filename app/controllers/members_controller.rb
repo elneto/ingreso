@@ -22,6 +22,13 @@ class MembersController < ApplicationController
 		end
   end
 
+  def destroy
+  	@member = Member.find(params[:id])
+  	@member.destroy
+
+  	redirect_to members_path
+  end
+
   private
   	def member_params
   		params.require(:member).permit(:nombre, :apellido, :index, :fecha_inicio, :fecha_fin, :tipo_contrato)
