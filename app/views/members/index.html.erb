@@ -18,8 +18,12 @@
 		<td><%= member.apellido.to_s %></td>
 		<td><%= member.nombre.to_s %></td>
 		<td><%= member.index.to_s %></td>
-		<td><%= member.fecha_inicio.to_s %></td>
-		<td><%= member.fecha_fin.to_s %></td>
+		<td><%= unless member.fecha_inicio.nil? 
+							member.fecha_inicio.strftime("%d/%b/%y")
+						end %></td>
+		<td><%= unless member.fecha_fin.nil? 
+							member.fecha_fin.strftime("%d/%b/%y")
+						end %></td>
 		<td><%= link_to 'Ver', member_path(member) %></td>
 		<td><%= link_to 'Editar' %></td>
 		<td><%= link_to 'Borrar', member_path(member),
