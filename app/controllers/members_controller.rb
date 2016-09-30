@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
 	def index
-		@members = Member.all
+		@members = Member.order('members.fecha_fin DESC').all
 	end
 
 	def show
