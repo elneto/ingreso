@@ -12,12 +12,12 @@
   <div class="row">
     <div class="col-sm-3">
       <br>
-      <%= f.label :nombre, "Nombre(s)" %><br>
+      <%= f.label :nombre, "Nombre(s)*" %><br>
       <%= f.text_field :nombre %>
     </div>
     <div class="col-sm-3">
     <br>
-      <%= f.label :apellido, "Apellido(s)" %><br>
+      <%= f.label :apellido, "Apellido(s)*" %><br>
       <%= f.text_field :apellido, style: 'text-transform:uppercase' %>
     </div>
     <div class="col-sm-6">&nbsp;</div>
@@ -26,12 +26,12 @@
   <div class="row">
     <div class="col-sm-3">
     <br>
-      <%= f.label :fecha_inicio, "Fecha de inicio" %><br>
+      <%= f.label :fecha_inicio, "Fecha de inicio*" %><br>
       <%= f.text_field :fecha_inicio, placeholder: 'dd/mm/yy', :readonly => true%>
     </div>
     <div class="col-sm-3">
     <br>
-      <%= f.label :fecha_fin, "Fin de contrato" %><br>
+      <%= f.label :fecha_fin, "Fin de contrato*" %><br>
       <%= f.text_field :fecha_fin, placeholder: 'dd/mm/yy', :readonly => true%>
     </div>
     <div class="col-sm-6">&nbsp;</div>
@@ -40,12 +40,12 @@
   <div class="row">
     <div class="col-sm-3">
     <br>
-      <%= f.label :index, "Index no." %><br>
+      <%= f.label :index, "Index no.*" %><br>
       <%= f.number_field :index %>
     </div>
     <div class="col-sm-3">
     <br>
-      <%= f.label :tipo_contrato, "Tipo de contrato" %><br>
+      <%= f.label :tipo_contrato, "Tipo de contrato*" %><br>
       <%= f.select :tipo_contrato, [
         ['Fixed term', 'Fixed term'],
         ['Temporary', 'Temporary'],
