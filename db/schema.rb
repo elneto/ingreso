@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160925021831) do
+ActiveRecord::Schema.define(version: 20161001190032) do
 
   create_table "members", force: :cascade do |t|
     t.string   "nombre"
@@ -19,8 +19,21 @@ ActiveRecord::Schema.define(version: 20160925021831) do
     t.date     "fecha_inicio"
     t.date     "fecha_fin"
     t.string   "tipo_contrato"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.boolean  "oficina"
+    t.boolean  "computo"
+    t.boolean  "telefono"
+    t.boolean  "llamadas_ld"
+    t.boolean  "usuario_novell"
+    t.boolean  "lotus_notes"
+    t.boolean  "acceso_umoja"
+    t.boolean  "lista_correo"
+    t.boolean  "acceso_shared"
+    t.string   "numero_oficina"
+    t.string   "extension"
+    t.text     "roles_umoja"
+    t.text     "programas"
   end
 
 end

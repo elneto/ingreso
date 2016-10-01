@@ -5,9 +5,17 @@ $un-blue: #4B92DB;
 
 body{
 	padding-top: 50px;
-	input, select{
+}
+
+form input[type=text], 
+form input[type=number], 
+form select,
+form textarea{
 	width:94%;
 	}
+
+form input[type=checkbox]{
+	margin-right: 0.4em;
 }
 
 nav.navbar-inverse {

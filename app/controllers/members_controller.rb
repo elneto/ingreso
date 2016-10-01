@@ -27,7 +27,7 @@ class MembersController < ApplicationController
   end
 
   def update
-  	@member = Member.new(member_params)
+  	@member = Member.find(params[:id])
     
     if @member.update(member_params)
 			redirect_to @member
@@ -45,6 +45,6 @@ class MembersController < ApplicationController
 
   private
   	def member_params
-  		params.require(:member).permit(:nombre, :apellido, :index, :fecha_inicio, :fecha_fin, :tipo_contrato)
+  		params.require(:member).permit(:nombre, :apellido, :index, :fecha_inicio, :fecha_fin, :tipo_contrato, :oficina, :computo, :telefono, :llamadas_ld, :usuario_novell, :lotus_notes, :acceso_umoja, :lista_correo, :acceso_shared, :numero_oficina, :extension, :roles_umoja, :programas)
   	end
 end

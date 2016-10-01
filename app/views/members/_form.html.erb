@@ -58,13 +58,32 @@
     </div>
     <div class="col-sm-6">&nbsp;</div>
   </div>
-
+  <h2>Requiere:</h2>
   <div class="row">
-    <div class="col-sm-12">
-      
+    <div class="col-sm-4">
+      <%= f.check_box :oficina %><%= f.label :oficina, "Espacio u oficina" %>
+      <br><%= f.check_box :computo %><%= f.label :computo, "Equipo de cómputo" %>
+      <br><%= f.check_box :telefono %><%= f.label :telefono, "Teléfono" %>
+      <br><%= f.check_box :llamadas_ld %><%= f.label :llamadas_ld, "Llamadas de larga distancia o celular" %>
+      <br><%= f.check_box :usuario_novell %><%= f.label :usuario_novell, "Usuario de novell" %>
+      <br><%= f.check_box :lotus_notes %><%= f.label :lotus_notes, "Correo electrónico" %>
+      <br><%= f.check_box :lista_correo %><%= f.label :lista_correo, "Lista de correo electrónico de la sección" %>
+      <br><%= f.check_box :acceso_shared %><%= f.label :acceso_shared, "Acceso a shared drive" %>
+      <br><%= f.check_box :acceso_umoja %><%= f.label :acceso_umoja, "Acceso a Umoja" %>
+    </div>
+
+    <div class="col-sm-4">
+      <br>
+      <%= f.label :numero_oficina, "Número de oficina" %><br>
+      <%= f.text_field :numero_oficina %>
+      <br>
+      <%= f.label :roles_umoja, "Roles de Umoja" %><br>
+      <%= f.text_area :roles_umoja %>
+      <br>
+      <%= f.label :programas, "Programas (software)" %><br>
+      <%= f.text_area :programas %>
     </div>
   </div>
-
 
   <div class="row">
     <div class="col-sm-3">
