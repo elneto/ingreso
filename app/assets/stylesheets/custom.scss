@@ -24,7 +24,7 @@ a.navbar-brand {
 	color: white !important;
 }
 
-h1, label {
+h1, h2, h3, label {
   color: #444 !important;
 }
 
@@ -37,4 +37,9 @@ h1, label {
 th, td {
   padding: 0.6em !important;
   border-bottom: 1px solid grey;
+}
+
+.group-section{
+	border: 1px solid #ddd;
+  padding: 2em;
 }

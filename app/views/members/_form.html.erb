@@ -1,3 +1,5 @@
+<div class="group-section">
+<h2>Datos generales</h2>
 <%= form_for @member do |f| %>
   <% if @member.errors.any? %>
     <div class="alert-danger" role="alert">Por favor corrija los errores siguientes:
@@ -58,6 +60,13 @@
   </div>
 
   <div class="row">
+    <div class="col-sm-12">
+      
+    </div>
+  </div>
+
+
+  <div class="row">
     <div class="col-sm-3">
     <br><br>
       <%= f.submit "Enviar solicitud" %>
@@ -65,3 +74,4 @@
     <div class="col-sm-9">&nbsp;</div>
   </div>
 <% end %>
+</div>
