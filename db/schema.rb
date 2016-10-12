@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161001190032) do
+ActiveRecord::Schema.define(version: 20161012195105) do
 
   create_table "members", force: :cascade do |t|
     t.string   "nombre"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20161001190032) do
     t.date     "fecha_inicio"
     t.date     "fecha_fin"
     t.string   "tipo_contrato"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.boolean  "oficina"
     t.boolean  "computo"
     t.boolean  "telefono"
@@ -34,6 +34,27 @@ ActiveRecord::Schema.define(version: 20161001190032) do
     t.string   "extension"
     t.text     "roles_umoja"
     t.text     "programas"
+    t.string   "nombre_solicitante"
+    t.string   "email_solicitante"
+    t.string   "numero_credencial"
+    t.string   "sec_in_numero_pase"
+    t.boolean  "sec_in_tiene_llaves"
+    t.integer  "sec_in_numero_llaves"
+    t.boolean  "sec_in_fotografia"
+    t.text     "sec_in_comentarios"
+    t.boolean  "sec_in_aprobado"
+    t.boolean  "sg_in_notificacion_recepcion"
+    t.string   "sg_in_credencial_edificio"
+    t.string   "sg_in_tarjeta_estacionamiento"
+    t.boolean  "sg_in_aprobado"
+    t.string   "utic_in_inventario_pc"
+    t.string   "utic_in_extension"
+    t.boolean  "utic_in_ld"
+    t.string   "utic_in_usuario_novell"
+    t.string   "utic_in_email_cepal"
+    t.boolean  "utic_in_aprobado"
+    t.boolean  "cridd_in_servicios"
+    t.boolean  "cridd_in_aprobado"
   end
 
 end
