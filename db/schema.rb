@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161012195105) do
+ActiveRecord::Schema.define(version: 20161014180646) do
 
   create_table "members", force: :cascade do |t|
     t.string   "nombre"
@@ -55,6 +55,10 @@ ActiveRecord::Schema.define(version: 20161012195105) do
     t.boolean  "utic_in_aprobado"
     t.boolean  "cridd_in_servicios"
     t.boolean  "cridd_in_aprobado"
+    t.datetime "sec_in_date_aprobado"
+    t.datetime "sg_in_date_aprobado"
+    t.datetime "utic_in_date_aprobado"
+    t.datetime "cridd_in_date_aprobado"
   end
 
 end
