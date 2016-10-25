@@ -87,6 +87,20 @@
 
   <div class="row">
     <div class="col-sm-3">
+      <br>
+      <%= f.label :nombre_solicitante, "Nombre(s) solicitante*" %><br>
+      <%= f.text_field :nombre_solicitante %>
+    </div>
+    <div class="col-sm-3">
+    <br>
+      <%= f.label :email_solicitante, "Correo electrónico del solicitante*" %><br>
+      <%= f.text_field :email_solicitante %>
+    </div>
+    <div class="col-sm-6">&nbsp;</div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
     <br><br>
       <%= f.submit "Enviar solicitud" %>
     </div>

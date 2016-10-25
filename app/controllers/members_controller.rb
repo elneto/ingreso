@@ -43,8 +43,12 @@ class MembersController < ApplicationController
   	redirect_to members_path
   end
 
+  def approve
+		@member = Member.find(params[:id])
+	end
+
   private
   	def member_params
-  		params.require(:member).permit(:nombre, :apellido, :index, :fecha_inicio, :fecha_fin, :tipo_contrato, :oficina, :computo, :telefono, :llamadas_ld, :usuario_novell, :lotus_notes, :acceso_umoja, :lista_correo, :acceso_shared, :numero_oficina, :extension, :roles_umoja, :programas)
+  		params.require(:member).permit(:nombre, :apellido, :index, :fecha_inicio, :fecha_fin, :tipo_contrato, :oficina, :computo, :telefono, :llamadas_ld, :usuario_novell, :lotus_notes, :acceso_umoja, :lista_correo, :acceso_shared, :numero_oficina, :extension, :roles_umoja, :programas, :nombre_solicitante, :email_solicitante)
   	end
 end
