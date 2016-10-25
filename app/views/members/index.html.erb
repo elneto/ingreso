@@ -10,6 +10,7 @@
 		<th>Fecha de termino</th>
 		<th>Ver</th>
 		<th>Editar</th>
+		<th>Aprobar</th>
 		<th>Borrar</th>
 	</tr>
 
@@ -26,6 +27,7 @@
 						end %></td>
 		<td><%= link_to 'Ver', member_path(member) %></td>
 		<td><%= link_to 'Editar', edit_member_path(member) %></td>
+		<td><%= link_to 'Aprobar', approve_member_path(member) %></td>
 		<td><%= link_to 'Borrar', member_path(member),
 						method: :delete,
 						data: {confirm: 'Seguro que lo deseas eliminar?'}%></td>
