@@ -1,65 +1,32 @@
 <h1>Aprobar nuevo usuario</h1>
 
-<div class="group-section">
-<h2>Datos generales</h2>
-<%= form_for @member do |f| %>
-  <% if @member.errors.any? %>
-    <div class="alert-danger" role="alert">Por favor corrija los errores siguientes:
-      <ul>
-      <% @member.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>  
-      </ul>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="well well-sm">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                    <h4><%= @member.nombre+" "+@member.apellido%></h4>
+                    Index no. <%= @member.index %>
+                    <p>
+                        <!-- <i class="glyphicon glyphicon-envelope"></i>email@example.com
+                        <br /> -->
+                        Tipo de contrato: <%= @member.tipo_contrato %> <br>
+                        Inicio: <%= @member.fecha_inicio.strftime("%d/%b/%Y") %><br>
+                        Fin: <%= @member.fecha_fin.strftime("%d/%b/%Y") %>
+                      </p>
+                    
+                </div>
+            </div>
+        </div>
     </div>
-  <% end %>
+</div>
 
-  <div class="row">
-    <div class="col-sm-3">
-      <br>
-      <%= f.label :nombre, "Nombre(s)*" %><br>
-      <%= f.text_field :nombre %>
-    </div>
-    <div class="col-sm-3">
-    <br>
-      <%= f.label :apellido, "Apellido(s)*" %><br>
-      <%= f.text_field :apellido, style: 'text-transform:uppercase' %>
-    </div>
-    <div class="col-sm-6">&nbsp;</div>
-  </div>
 
-  <div class="row">
-    <div class="col-sm-3">
-    <br>
-      <%= f.label :fecha_inicio, "Fecha de inicio*" %><br>
-      <%= f.text_field :fecha_inicio, placeholder: 'dd/mm/yy', :readonly => true%>
-    </div>
-    <div class="col-sm-3">
-    <br>
-      <%= f.label :fecha_fin, "Fin de contrato*" %><br>
-      <%= f.text_field :fecha_fin, placeholder: 'dd/mm/yy', :readonly => true%>
-    </div>
-    <div class="col-sm-6">&nbsp;</div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3">
-    <br>
-      <%= f.label :index, "Index no.*" %><br>
-      <%= f.number_field :index %>
-    </div>
-    <div class="col-sm-3">
-    <br>
-      <%= f.label :tipo_contrato, "Tipo de contrato*" %><br>
-      <%= f.select :tipo_contrato, [
-        ['Fixed term', 'Fixed term'],
-        ['Temporary', 'Temporary'],
-        ['Intern', 'Intern'],
-        ['Consultant', 'Consultant'],
-        ['Contractor', 'Contractor'],
-        ]%>
-    </div>
-    <div class="col-sm-6">&nbsp;</div>
-  </div>
+<% if false %>
+  
   <h2>Requiere:</h2>
   <div class="row">
     <div class="col-sm-4">
@@ -100,13 +67,4 @@
     </div>
     <div class="col-sm-6">&nbsp;</div>
   </div>
-
-  <div class="row">
-    <div class="col-sm-3">
-    <br><br>
-      <%= f.submit "Enviar solicitud" %>
-    </div>
-    <div class="col-sm-9">&nbsp;</div>
-  </div>
 <% end %>
-</div>
