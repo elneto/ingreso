@@ -1,28 +1,6 @@
 <h1>Aprobar nuevo usuario</h1>
 
-<div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-6">
-        <div class="well well-sm">
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
-                </div>
-                <div class="col-sm-6 col-md-8">
-                    <h4><%= @member.nombre+" "+@member.apellido%></h4>
-                    Index no. <%= @member.index %>
-                    <p>
-                        <!-- <i class="glyphicon glyphicon-envelope"></i>email@example.com
-                        <br /> -->
-                        Tipo de contrato: <%= @member.tipo_contrato %> <br>
-                        Inicio: <%= @member.fecha_inicio.strftime("%d/%b/%Y") %><br>
-                        Fin: <%= @member.fecha_fin.strftime("%d/%b/%Y") %>
-                      </p>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<%= render 'profile' %>
 
 
 <% if false %>
