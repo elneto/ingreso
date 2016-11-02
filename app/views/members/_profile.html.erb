@@ -6,7 +6,7 @@
                     <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
                 </div>
                 <div class="col-sm-6 col-md-8">
-                    <h4><%= @member.nombre+" "+@member.apellido%></h4>
+                    <h4><strong><%= @member.nombre+" "+@member.apellido%></strong></h4>
                     Index no. <strong><%= @member.index %></strong>
                     <p>
                     <!-- <i class="glyphicon glyphicon-envelope"></i>email@example.com
@@ -30,7 +30,11 @@
                     <%if @member.acceso_shared %>Acceso a shared drive<br><% end %>
                     <%if @member.acceso_umoja %>Acceso a Umoja<br><% end %>
                     </p>
-
+                    
+                    <%if @member.nombre_solicitante != nil and @member.email_solicitante != nil %>
+                        <h4>Solicitante:</h4>
+                        <strong><%= @member.nombre_solicitante + " (" + @member.email_solicitante + ")"%></strong>
+                    <% end %>
                 </div>
             </div>
         </div>

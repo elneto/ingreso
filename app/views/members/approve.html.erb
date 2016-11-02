@@ -1,46 +1,23 @@
 <h1>Aprobar nuevo usuario</h1>
 
+<% # render partial: 'profile', locals: {en_approve: true} %>
 <%= render 'profile' %>
-
-
-<% if false %>
-  
-  <h2>Requiere:</h2>
-  <div class="row">
-    <div class="col-sm-4">
-      
-      <br><%= f.check_box :llamadas_ld %><%= f.label :llamadas_ld, "Llamadas de larga distancia o celular" %>
-      <br><%= f.check_box :usuario_novell %><%= f.label :usuario_novell, "Usuario de novell" %>
-      <br><%= f.check_box :lotus_notes %><%= f.label :lotus_notes, "Correo electrónico" %>
-      <br><%= f.check_box :lista_correo %><%= f.label :lista_correo, "Lista de correo electrónico de la sección" %>
-      <br><%= f.check_box :acceso_shared %><%= f.label :acceso_shared, "Acceso a shared drive" %>
-      <br><%= f.check_box :acceso_umoja %><%= f.label :acceso_umoja, "Acceso a Umoja" %>
-    </div>
-
-    <div class="col-sm-4">
-      <br>
-      <%= f.label :numero_oficina, "Número de oficina" %><br>
-      <%= f.text_field :numero_oficina %>
-      <br>
-      <%= f.label :roles_umoja, "Roles de Umoja" %><br>
-      <%= f.text_area :roles_umoja %>
-      <br>
-      <%= f.label :programas, "Programas (software)" %><br>
-      <%= f.text_area :programas %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3">
-      <br>
-      <%= f.label :nombre_solicitante, "Nombre(s) solicitante*" %><br>
-      <%= f.text_field :nombre_solicitante %>
-    </div>
-    <div class="col-sm-3">
-    <br>
-      <%= f.label :email_solicitante, "Correo electrónico del solicitante*" %><br>
-      <%= f.text_field :email_solicitante %>
-    </div>
-    <div class="col-sm-6">&nbsp;</div>
-  </div>
+<%= form_for @member do |f| %>
+<div class="group-section">
+	<h2>Oficial de Seguridad</h2>
+		<div class="row">
+		    <div class="col-sm-3">
+		      <br>
+		      <%= f.label :numero_credencial, "Credencial de CEPAL No." %><br>
+		      <%= f.text_field :numero_credencial %>
+		    </div>
+		    <div class="col-sm-3">
+		    <br>
+		      <%= f.label :sec_in_numero_pase, "Pase Temporal No." %><br>
+		      <%= f.text_field :sec_in_numero_pase %>
+		    </div>
+		    <div class="col-sm-6">&nbsp;</div>
+		  </div>
+		</div>
+</div>
 <% end %>
