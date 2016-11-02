@@ -7,15 +7,30 @@
                 </div>
                 <div class="col-sm-6 col-md-8">
                     <h4><%= @member.nombre+" "+@member.apellido%></h4>
-                    Index no. <%= @member.index %>
+                    Index no. <strong><%= @member.index %></strong>
                     <p>
-                        <!-- <i class="glyphicon glyphicon-envelope"></i>email@example.com
-                        <br /> -->
-                        Tipo de contrato: <%= @member.tipo_contrato %> <br>
-                        Inicio: <%= @member.fecha_inicio.strftime("%d/%b/%Y") %><br>
-                        Fin: <%= @member.fecha_fin.strftime("%d/%b/%Y") %>
-                      </p>
-                    
+                    <!-- <i class="glyphicon glyphicon-envelope"></i>email@example.com
+                    <br /> -->
+                        Tipo de contrato: <strong><%= @member.tipo_contrato %></strong> <br>
+                        Inicio: <strong><%= @member.fecha_inicio.strftime("%d/%b/%Y") %></strong><br>
+                        Fin: <strong><%= @member.fecha_fin.strftime("%d/%b/%Y") %></strong><br>
+                        Número de oficina: <strong><%= @member.numero_oficina %></strong> <br>
+                        Roles de Umoja: <strong><%= @member.roles_umoja %></strong><br>
+                        Programas (software): <strong><%= @member.programas %></strong>
+                    </p>
+                    <h4>Requiere:</h4>
+                    <p>
+                    <%if @member.oficina %>Espacio u oficina<br><% end %>
+                    <%if @member.computo %>Equipo de cómputo<br><% end %>
+                    <%if @member.telefono %>Teléfono<br><% end %>
+                    <%if @member.llamadas_ld %>Llamadas de larga distancia o celular<br><% end %>
+                    <%if @member.usuario_novell %>Usuario de novell<br><% end %>
+                    <%if @member.lotus_notes %>Correo electrónico<br><% end %>
+                    <%if @member.lista_correo %>Lista de correo electrónico de la sección<br><% end %>
+                    <%if @member.acceso_shared %>Acceso a shared drive<br><% end %>
+                    <%if @member.acceso_umoja %>Acceso a Umoja<br><% end %>
+                    </p>
+
                 </div>
             </div>
         </div>
